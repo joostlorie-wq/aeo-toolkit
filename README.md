@@ -10,10 +10,10 @@ It audits the structure of a page against published findings on what LLMs lift i
 |---|---|
 | `scripts/html_to_md.py` | Convert a page's HTML to clean Markdown (keeps headings, lists, tables; drops nav/footer chrome) |
 | `scripts/analyze.py` | Measure the page: answer position, definition sentences, entity density, tables, freshness signals, question headings |
-| `scripts/extract_blocks.py` | Pull out the blocks AI engines quote most: opening, bullets, H2/H3 intros |
-| `scripts/check_rewrite.py` | Compare original and rewrite: did the key factors actually improve? |
-| `scripts/run_audit.py` | One-shot: fetch a URL, run the checks, print a scorecard |
-| `scripts/build_doc.py` | Render an audit JSON into a readable HTML report |
+| `scripts/extract_blocks.py` | Extract candidate snippet blocks from a live page and score their first 160 characters |
+| `scripts/check_rewrite.py` | Check a full rewrite against the original before delivery (e.g. headings unchanged in order and level) |
+| `scripts/run_audit.py` | One-shot: live URL to HTML/Markdown, structure analysis and 160-character snippet scoring |
+| `scripts/build_doc.py` | Build a client-facing report as HTML (importable into Google Docs) from an audit JSON |
 | `docs/structure-optimizer.md` | The full workflow and rewrite rules |
 | `docs/evidence.md` | The research behind each factor, with the stat and its limits |
 
@@ -31,6 +31,6 @@ Or the shortcut: `python scripts/run_audit.py https://example.com/page --kw "ter
 
 ## Notes
 
-- Standard library plus `requests` where noted in the scripts.
+- Python standard library only. No paid scraper or extra packages needed.
 - The heuristics (entities, definitions, question words) are tuned for English. For other languages treat the output as directional.
 - Evidence strength varies per factor. `docs/evidence.md` says which findings are strong and which are anecdotal. Read it before you treat a number as law.
