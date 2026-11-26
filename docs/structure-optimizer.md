@@ -4,7 +4,7 @@
 
 Turn a page written for "keep the human scrolling" into one an LLM can lift
 answers from. Every recommendation has to trace back to a measured finding in
-`..\references\evidence.md`. That evidence is what separates this from
+`evidence.md`. That evidence is what separates this from
 generic AEO advice, so always cite the factor ID
 (e.g. `[POS-DOC]`) and the stat behind it.
 
@@ -49,7 +49,7 @@ approximate proper-noun count. Use them to spot problems and to compare
 before/after, and use your own reading to confirm. Never report a heuristic
 number as if it were an exact measurement against the study benchmark.
 
-### 3. Read `..\references\evidence.md`, then diagnose
+### 3. Read `evidence.md`, then diagnose
 Judge each factor against its benchmark. Things the script can't see that you
 must judge by reading:
 - **Is the key insight actually in the first ~20–30%?** The script only finds
@@ -359,7 +359,7 @@ Keep the scorecard honest. A 🟢 is fine. Don't invent problems to fill the
 list.
 
 ## Adding new studies
-When you supply another study, add it to `..\references\evidence.md` as a
+When you supply another study, add it to `evidence.md` as a
 new "Study N" section using the same structure (source, dataset, findings
 with IDs, caveats). Record any disagreements under "Conflicts & open
 questions", then update the factor priority list. If a new finding is
