@@ -34,3 +34,7 @@ Or the shortcut: `python scripts/run_audit.py https://example.com/page --kw "ter
 - Python standard library only. No paid scraper or extra packages needed.
 - The heuristics (entities, definitions, question words) are tuned for English. For other languages treat the output as directional.
 - Evidence strength varies per factor. `docs/evidence.md` says which findings are strong and which are anecdotal. Read it before you treat a number as law.
+
+## Credits and license
+
+The structure analysis (`analyze.py`, `html_to_md.py`, `check_rewrite.py`, `build_doc.py`), `docs/structure-optimizer.md` and `docs/evidence.md` are adapted from [Nectiv Digital's claude skills](https://github.com/Nectiv-Digital/nectiv-claude-skills) (MIT, see `LICENSE-NECTIV`). The research they build on is credited per study in `docs/evidence.md`. The 160-character snippet scoring (`extract_blocks.py`, the snippet part of `run_audit.py`) follows [DEJAN's analysis of how AI Mode selects snippets](https://dejan.ai/blog/how-ai-mode-selects-snippets/). Changes and additions are mine.
