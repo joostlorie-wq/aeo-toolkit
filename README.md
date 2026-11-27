@@ -13,8 +13,10 @@ It audits the structure of a page against published findings on what LLMs lift i
 | `scripts/extract_blocks.py` | Extract candidate snippet blocks from a live page and score their first 160 characters |
 | `scripts/check_rewrite.py` | Check a full rewrite against the original before delivery (e.g. headings unchanged in order and level) |
 | `scripts/run_audit.py` | One-shot: live URL to HTML/Markdown, structure analysis and 160-character snippet scoring |
+| `scripts/citation_tally.py` | Tally which domains and pages AI answers cite for a prompt, and whether your brand is named and/or cited |
 | `scripts/build_doc.py` | Build a client-facing report as HTML (importable into Google Docs) from an audit JSON |
 | `docs/structure-optimizer.md` | The full workflow and rewrite rules |
+| `docs/competitor-serp.md` | Check why a competitor is cited and you are not, before you rewrite |
 | `docs/evidence.md` | The research behind each factor, with the stat and its limits |
 
 ## Quick start
